@@ -42,6 +42,7 @@
     "clean": "rimraf lib/",
     "clean:ts": "rimraf ts-output/",
     "compile": "babel -d lib/ src/",
+    "install": "babel -d lib/ src/",
     "prepublish": "npm run clean && npm run compile",
     "test:ts": "npm run clean:ts && tsc && NODE_ENV=test mocha --require babel-core/register --exit --timeout 5000 $(find ./ts-output -name *.tests.js)",
     "test:js": "NODE_ENV=test mocha --require babel-core/register --exit --timeout 5000 $(find ./tests -name *.tests.js)",
